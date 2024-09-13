@@ -200,9 +200,9 @@
 						    <!-- Product -->
                             <div class="product">
                                 <div class="product_image"><img src="images/{{$img}}" alt="{{$products->title}}"></div>
-                                <div class="product_extra product_new"><a href="categories.html">{{$products->category['title']}}</a></div>
+                                <div class="product_extra product_new"><a href="{{$products->category['alias']}}">{{$products->category['title']}}</a></div>
                                 <div class="product_content">
-                                    <div class="product_title"><a href="{{route('ShowProduct', ['category', $products->id])}}">{{$products->title}}</a></div>
+                                    <div class="product_title"><a href="{{route('ShowProduct', ['category', $products->title])}}">{{$products->title}}</a></div>
                                         @if($products->new_price)
                                             <div class="product_price">${{$products->new_price}}</div>
                                             <div style="text-decoration:  line-through ">${{$products->price}}</div>
